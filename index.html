@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Clone - Tarun Sharma</title>
+    <link rel="shortcut icon" href="./images/youtube-logo.png" type="image/x-icon">
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/queries.css">
+    <link rel="stylesheet" href="./styles/colorVars.css">
+    <link rel="stylesheet" href="./styles/common-styles.css">
+
+    <!-- FONT -->
+    
+    <!-- montserat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+    <!-- poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="./font awesome/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+    <!-- ----------------------------------------------- -->
+    <!-- -------------------HEADER---------------------- -->
+    <!-- ----------------------------------------------- -->
+    
+    <header class="header">
+        <div class="container">
+
+            <nav class="nav">
+
+                <!-- BRAND  -->
+                <div class="brand">
+                    <div class="burger-nav">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </div>
+                    <div class="logo-wrapper">
+                        <img src="./images/brand-logo-light.png" title="Youtube Home" alt="">
+                    </div>
+                </div>
+
+                <!-- SEARCH -->
+                <div class="search">
+                    <div class="search-input">
+                        <input type="search" name="" placeholder="Search" id="">
+                        <button class="search-btn-js" title="Search"><i class="fa fa-search"></i></button>
+                    </div>
+                    <div class="mic" title="Search with your voice">
+                        <i class="fa fa-microphone"></i>
+                    </div>
+                </div>
+                
+                <!-- ACCOUNT RELATED -->
+                <div class="account-related">
+                    <ul class="account-menu">
+                        <li class="account-menu-link">
+                            <a href="video-player.html" style="font-size: 1.8rem;" target="_blank"><i class="fa fa-video-camera" aria-hidden="true" title="Create"></i></a>
+                        </li>
+                        <li class="account-menu-link">
+                            <div class="dot" title="Youtube apps"><div></div></div>
+                        </li>
+                        <li class="account-menu-link">
+                            <i class="fa fa-bell-o" title="Notifications"></i>
+                        </li>
+                        <li class="account-menu-link">
+                            <div class="profile"><img src="./images/profile.jpg" alt=""></div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="responsive-search">
+                <div class="search-input">
+                    <button class="close-btn-js" title="Close"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+                    <input type="search" name="" placeholder="Search" id="">
+                    <button title="Search"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- ----------------------------------------------- -->
+    <!-- -------------------SECTION---------------------- -->
+    <!-- ----------------------------------------------- -->
+    
+    <section class="section">
+        <div class="section-container">
+
+            <!-- LEFT DIV -->
+            <div class="left-div-wrapper res-hide">
+
+                <div class="menu menu-1">
+                    <ul class="menu-list">
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-home" aria-hidden="true"></i></div>
+                            <div class="title">Home</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-compass" aria-hidden="true"></i></div>
+                            <div class="title">Explore</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><img src="./images/shorts-logo.png" alt=""></div>
+                            <div class="title">Shorts</div>
+                        </li>
+                        <li class="menu-link subscribe-link">
+                            <div class="icon"><i class="fa fa-play subscribe"></i></div>
+                            <div class="title">Subscriptions</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <div class="menu menu-2">
+                    <ul class="menu-list">
+                        <li class="menu-link library-icon">
+                            <div class="icon"><div class="icon-wrapper"><i class="fa fa-play"></i></div></div>
+                            <div class="title">Library</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-history" aria-hidden="true"></i></div>
+                            <div class="title">History</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-play"></i></div>
+                            <div class="title">Your videos</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-clock-o"></i></div>
+                            <div class="title">Watch later</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></div>
+                            <div class="title">Liked videos</div>
+                        </li>
+                        <li class="menu-link see-more-js-1">
+                            <div class="icon"><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
+                            <div class="title">Show more</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="menu menu-3">
+                    <ul class="menu-list">
+                        <li class="menu-link">
+                            <div class="icon"><img src="./images/subscriptions.png" alt=""></div>
+                            <div class="title">OnGoing C++ Placement Course</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><img src="./images/subscriptions.png" alt=""></div>
+                            <div class="title">Java Complete Course</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><img src="./images/subscriptions.png" alt=""></div>
+                            <div class="title">Learn Advance PHP</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><img src="./images/subscriptions.png" alt=""></div>
+                            <div class="title">Node.js Crash Course</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><img src="./images/subscriptions.png" alt=""></div>
+                            <div class="title">Full Mordern React Tutorial</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><img src="./images/subscriptions.png" alt=""></div>
+                            <div class="title">Logarithms</div>
+                        </li>
+                        <li class="menu-link see-less-js-1">
+                            <div class="icon"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
+                            <div class="title">Show Fewer</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <div class="menu menu-4">
+                    <ul class="menu-list">
+                        <li class="menu-link">
+                            <div class="icon">
+                                <div class="profile"><img src="./images/intellipaat.jpg" alt=""></div>
+                            </div>
+                            <div class="title">Intellipaat</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon">
+                                <div class="icon">
+                                    <div class="profile"><img src="./images/trends-logo.jpg" alt=""></div>
+                                </div>
+                            </div>
+                            <div class="title">TRENDS LOGO</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon">
+                                <div class="icon">
+                                    <div class="profile"><img src="./images/5-minutes-craft.jpg" alt=""></div>
+                                </div>
+                            </div>
+                            <div class="title">5-minutes Crafts</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon">
+                                 <div class="icon">
+                                <div class="profile"><img src="./images/codehelp.jpg" alt=""></div>
+                            </div>
+                            </div>
+                            <div class="title">Codehelp - by Babbar</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon">
+                                 <div class="icon">
+                                <div class="profile"><img src="./images/tseries.jpg" alt=""></div>
+                            </div>
+                            </div>
+                            <div class="title">T-Series</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon">
+                                 <div class="icon">
+                                <div class="profile"><img src="./images/easy-tutorials.jpg" alt=""></div>
+                            </div>
+                            </div>
+                            <div class="title">Easy Tutorials</div>
+                        </li>
+                        <li class="menu-link see-more-js-2">
+                            <div class="icon"><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
+                            <div class="title">Show more</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="menu menu-5">
+                    <ul class="menu-list">
+                        <li class="menu-link">
+                            <div class="icon">
+                                <div class="profile"><img src="./images/dev-ed.jpg" alt=""></div>
+                            </div>
+                            <div class="title">Dev Ed</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon">
+                                <div class="profile"><img src="./images/sidhu-moosewala.jpg" alt=""></div>
+                            </div>
+                            <div class="title">Sidhu Moose Wala</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon">
+                                <div class="profile"><img src="./images/league-of-legends.jpg" alt=""></div>
+                            </div>
+                            <div class="title">League of Legends</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon">
+                                <div class="profile"><img src="./images/bnftv.jpg" alt=""></div>
+                            </div>
+                            <div class="title">BnfTV</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon">
+                                <div class="profile"><img src="./images/comicverse.jpg" alt=""></div>
+                            </div>
+                            <div class="title">ComicVerse</div>
+                        </li>
+                        <li class="menu-link see-less-js-2">
+                            <div class="icon"><i class="fa fa-arrow-up"></i></div>
+                            <div class="title">Show Fewer</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <div class="menu menu-6">
+                    <ul class="menu-list">
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-youtube-play" aria-hidden="true"></i></div>
+                            <div class="title">YouTube Premium</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-film" aria-hidden="true"></i></div>
+                            <div class="title">Films</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-gamepad" aria-hidden="true"></i></div>
+                            <div class="title">Gaming</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><img src="./images/live.png" alt=""></div>
+                            <div class="title">Live</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><img src="./images/fashion.png" alt=""></div>
+                            <div class="title">Fashion and beauty</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></div>
+                            <div class="title">Learning</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-trophy" aria-hidden="true"></i></div>
+                            <div class="title">Sports</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <div class="menu menu-7">
+                    <ul class="menu-list">
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-cog" aria-hidden="true"></i></div>
+                            <div class="title">Settings</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-flag-o" aria-hidden="true"></i></div>
+                            <div class="title">Report history</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-question-circle-o" aria-hidden="true"></i></div>
+                            <div class="title">Help</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-commenting-o" aria-hidden="true"></i></div>
+                            <div class="title">Send feedback</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <div class="menu privacy-policy">
+                    <div class="about">
+                        <a href="">About </a> <a href="">Press</a> <a href="">Copyright</a> <br>
+                        <a href="">Contact us</a> <a href="">Creator</a> <a href="">Advertise</a> <br>
+                        <a href="">Developers</a>
+                    </div>
+                    <div class="policy">
+                        <a href="">Terms</a> <a href="">Privacy</a> <a href="">Policy&Safety</a> <br>
+                        <a href="">How YouTube works</a> <br>
+                        <a href="">Test new features</a>
+                    </div>
+                    <div class="Copyright">
+                        This website is just for learning purpose <br>
+                        Intend is not making money thorugh this. <br><br>
+                        &copy; Tarun Sharma 2022 <br>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEFT DIV WRAPPER 2 -->
+            <div class="left-div-wrapper-2 hide2">
+                <ul class="icon-menu-list">
+                    <li class="icon-menu-link" title="Home">
+                        <div class="icon"><i class="fa fa-home"></i></div>
+                        <div class="title2">Home</div>
+                    </li>
+                    <li class="icon-menu-link" title="Explore">
+                        <div class="icon"><i class="fa fa-compass"></i></div>
+                        <div class="title2">Explore</div>
+                    </li>
+                    <li class="icon-menu-link" title="Shorts">
+                        <div class="icon"><img src="./images/shorts-logo.png" alt=""></div>
+                        <div class="title2">Shorts</div>
+                    </li>
+                    <li class="icon-menu-link subscribe-link" title="Subscriptions">
+                        <div class="icon"><i class="fa fa-play subscribe"></i></div>
+                        <div class="title2">Subscriptions</div>
+                    </li>
+                    <li class="icon-menu-link library-icon" title="Library">
+                        <div class="icon"><div class="icon-wrapper"><i class="fa fa-play"></i></div></div>
+                        <div class="title2">Library</div>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <!-- RIGHT DIV -->
+            <div class="right-div-wrapper">
+                <hr>
+
+                <!-- MENU LIST FOR CATEGORIES -->
+                <div class="catgories-wrapper-wrapper">
+                    <div class="categories-wrapper">
+                        <ul class="categories-menu categories-menu-js">
+                            <li class="categories-menu-link">
+                                All
+                            </li>
+                            <li class="categories-menu-link">
+                                Mixes
+                            </li>
+                            <li class="categories-menu-link">
+                                Javascript
+                            </li>
+                            <li class="categories-menu-link">
+                                Music
+                            </li>
+                            <li class="categories-menu-link">
+                                Computers
+                            </li>
+                            <li class="categories-menu-link">
+                                Data Structures
+                            </li>
+                            <li class="categories-menu-link">
+                                Comedy
+                            </li>
+                            <li class="categories-menu-link">
+                                Gaming
+                            </li>
+                            <li class="categories-menu-link">
+                                Sci-fi film
+                            </li>
+                            <li class="categories-menu-link">
+                                <div>T-Series</div>
+                            </li>
+                            <li class="categories-menu-link">
+                                <div>Live</div>
+                            </li>
+                            <li class="categories-menu-link">
+                                <div>Thrillers</div>
+                            </li>
+                            <li class="categories-menu-link">
+                                <div>Superheroes</div>
+                            </li>
+                            <li class="categories-menu-link">
+                                <div>Bhangra</div>
+                            </li>
+                            <li class="categories-menu-link">
+                                <div>Statistics</div>
+                            </li>
+                            <li class="categories-menu-link">
+                                <div>Indian pop music</div>
+                            </li>
+                            <li class="categories-menu-link">
+                                <div>Sneaker Collecting</div>
+                            </li>
+                            <li class="categories-menu-link">
+                                <div>Recently uploaded</div>
+                            </li>
+                            <li class="categories-menu-link">
+                                <div>Watched</div>
+                            </li>
+                            <li class="categories-menu-link">
+                                <div>New to you</div> 
+                            </li>
+                            
+                        </ul>
+                        
+                        <hr>
+                    </div>
+                    <div class="left-btn left-btn-js">
+                        <button title="Previous"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="right-btn right-btn-js">
+                        <button title="Next"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                
+                <!-- VIDEOS SHOW WRAPPER -->
+                <div class="videos-show-wrapper">
+                    
+                                 
+                    <div class="video-wrapper"> 
+                        <div class="video">
+                            <img src="./images/heart-attack.jpg" alt="">
+                            <video class="hoverVideo" height="180px" muted>
+                                <source src="./videos/Pexels4.mp4" type="video/mp4" />
+                                Your browser does not support videos.
+                            </video>
+                            <div class="time"></div>
+                        </div>
+
+                        <div class="video-info">
+                            <div class="profile"><img src="./images/alpha-studios.jpg" alt=""></div>
+                            <div class="desc">
+                                <p>Heart Attack | Official Video | Ammy Virk | Mani Longia | Starboy | Rahul Chahal | New Punjabi Song</p>
+                                <p title="">Alpha Studios</p>
+                                <p>20M views . 2 months ago</p>
+                            </div>
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                                 
+                    <div class="video-wrapper"> 
+                        <div class="video">
+                            <img src="./images/heart-attack.jpg" alt="">
+                            <video class="hoverVideo" height="180px" muted>
+                                <source src="./videos/Pexels5.mp4" type="video/mp4" />
+                                Your browser does not support videos.
+                            </video>
+                            <div class="time"> </div>
+                        </div>
+
+                        <div class="video-info">
+                            <div class="profile"><img src="./images/alpha-studios.jpg" alt=""></div>
+                            <div class="desc">
+                                <p>Heart Attack | Official Video | Ammy Virk | Mani Longia | Starboy | Rahul Chahal | New Punjabi Song</p>
+                                <p title="">Alpha Studios</p>
+                                <p>20M views . 2 months ago</p>
+                            </div>
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                                 
+                    <div class="video-wrapper"> 
+                        <div class="video">
+                            <img src="./images/heart-attack.jpg" alt="">
+                            <video class="hoverVideo" height="180px" muted>
+                                <source src="./videos/pexels1.mp4" type="video/mp4" />
+                                Your browser does not support videos.
+                            </video>
+                            <div class="time"> </div>
+                        </div>
+
+                        <div class="video-info">
+                            <div class="profile"><img src="./images/alpha-studios.jpg" alt=""></div>
+                            <div class="desc">
+                                <p>Heart Attack | Official Video | Ammy Virk | Mani Longia | Starboy | Rahul Chahal | New Punjabi Song</p>
+                                <p title="">Alpha Studios</p>
+                                <p>20M views . 2 months ago</p>
+                            </div>
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                                 
+                    <div class="video-wrapper"> 
+                        <div class="video">
+                            <img src="./images/heart-attack.jpg" alt="">
+                            <video class="hoverVideo" height="180px" muted>
+                                <source src="./videos/Pexels2.mp4" type="video/mp4" />
+                                Your browser does not support videos.
+                            </video>
+                            <div class="time"> </div>
+                        </div>
+
+                        <div class="video-info">
+                            <div class="profile"><img src="./images/alpha-studios.jpg" alt=""></div>
+                            <div class="desc">
+                                <p>Heart Attack | Official Video | Ammy Virk | Mani Longia | Starboy | Rahul Chahal | New Punjabi Song</p>
+                                <p title="">Alpha Studios</p>
+                                <p>20M views . 2 months ago</p>
+                            </div>
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                                 
+                    <div class="video-wrapper"> 
+                        <div class="video">
+                            <img src="./images/heart-attack.jpg" alt="">
+                            <video class="hoverVideo" height="180px" muted>
+                                <source src="./videos/Pexels3.mp4" type="video/mp4" />
+                                Your browser does not support videos.
+                            </video>
+                            <div class="time"> </div>
+                        </div>
+
+                        <div class="video-info">
+                            <div class="profile"><img src="./images/alpha-studios.jpg" alt=""></div>
+                            <div class="desc">
+                                <p>Heart Attack | Official Video | Ammy Virk | Mani Longia | Starboy | Rahul Chahal | New Punjabi Song</p>
+                                <p title="">Alpha Studios</p>
+                                <p>20M views . 2 months ago</p>
+                            </div>
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                                 
+                    <div class="video-wrapper"> 
+                        <div class="video">
+                            <img src="./images/heart-attack.jpg" alt="">
+                            <video class="hoverVideo" height="180px" muted>
+                                <source src="./videos/Pexels1.mp4" type="video/mp4" />
+                                Your browser does not support videos.
+                            </video>
+                            <div class="time"> </div>
+                        </div>
+
+                        <div class="video-info">
+                            <div class="profile"><img src="./images/alpha-studios.jpg" alt=""></div>
+                            <div class="desc">
+                                <p>Heart Attack | Official Video | Ammy Virk | Mani Longia | Starboy | Rahul Chahal | New Punjabi Song</p>
+                                <p title="">Alpha Studios</p>
+                                <p>20M views . 2 months ago</p>
+                            </div>
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                                 
+                    <div class="video-wrapper"> 
+                        <div class="video">
+                            <img src="./images/heart-attack.jpg" alt="">
+                            <video class="hoverVideo" height="180px" muted>
+                                <source src="./videos/Pexels4.mp4" type="video/mp4" />
+                                Your browser does not support videos.
+                            </video>
+                            <div class="time"> </div>
+                        </div>
+
+                        <div class="video-info">
+                            <div class="profile"><img src="./images/alpha-studios.jpg" alt=""></div>
+                            <div class="desc">
+                                <p>Heart Attack | Official Video | Ammy Virk | Mani Longia | Starboy | Rahul Chahal | New Punjabi Song</p>
+                                <p title="">Alpha Studios</p>
+                                <p>20M views . 2 months ago</p>
+                            </div>
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                                 
+                    <div class="video-wrapper"> 
+                        <div class="video">
+                            <img src="./images/heart-attack.jpg" alt="">
+                            <video class="hoverVideo" height="180px" muted>
+                                <source src="./videos/Pexels5.mp4" type="video/mp4" />
+                                Your browser does not support videos.
+                            </video>
+                            <div class="time"> </div>
+                        </div>
+
+                        <div class="video-info">
+                            <div class="profile"><img src="./images/alpha-studios.jpg" alt=""></div>
+                            <div class="desc">
+                                <p>Heart Attack | Official Video | Ammy Virk | Mani Longia | Starboy | Rahul Chahal | New Punjabi Song</p>
+                                <p title="">Alpha Studios</p>
+                                <p>20M views . 2 months ago</p>
+                            </div>
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                                 
+                    <div class="video-wrapper"> 
+                        <div class="video">
+                            <img src="./images/heart-attack.jpg" alt="">
+                            <video class="hoverVideo" height="180px" muted>
+                                <source src="./videos/Pexels6.mp4" type="video/mp4" />
+                                Your browser does not support videos.
+                            </video>
+                            <div class="time"> </div>
+                        </div>
+
+                        <div class="video-info">
+                            <div class="profile"><img src="./images/alpha-studios.jpg" alt=""></div>
+                            <div class="desc">
+                                <p>Heart Attack | Official Video | Ammy Virk | Mani Longia | Starboy | Rahul Chahal | New Punjabi Song</p>
+                                <p title="">Alpha Studios</p>
+                                <p>20M views . 2 months ago</p>
+                            </div>
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    
+    <!-- JAVASCRIPT -->
+    <script src="./js/app.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/database/db-render.js"></script>
+</body>
+</html>

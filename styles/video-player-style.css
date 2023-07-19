@@ -1,0 +1,114 @@
+.video-player .player{
+    position: relative;
+    color: var(--white);
+}
+.player{
+    /* background: red; */
+}
+.video-player .player .show-controls{
+    /* background: green; */
+    position: absolute;
+    width: 98%;
+    margin: auto;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    padding-top: 10%;
+}
+.video-player .player  .event-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    pointer-events: none;
+    /* transition: opacity 0.2s ease-in-out; */
+}
+.video-player .player .event-icon .animate{
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+.video-player .player .event-icon:nth-of-type(6),
+.video-player .player .event-icon:nth-of-type(8){
+    left: 80%;
+}
+.video-player .player .event-icon:nth-of-type(7),
+.video-player .player .event-icon:nth-of-type(9){
+    left: 20%;
+}
+.animate-js{
+    opacity: 0.75;
+    transition: opacity 0.2s ease-in-out;
+}
+.controls-container{
+    opacity: 0; 
+    transition: opacity 0.25s ease-out 2s;
+}
+.video-player .player .progress-range{
+    background: var(--white);
+    width: 100%;
+    height: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.video-player .player .progress-bar {
+    width: 0%;
+    height: 5px;
+    background: var(--youtube-red);
+    border-radius: 3px;
+    transition: all .2s ease;
+}
+.player select{
+    cursor: pointer;
+    background: none;
+    outline: none;
+    border: none;
+    color: var(--white);
+}
+.player option{
+    background: var(--black);
+}
+.video-player .player .control-group,
+.video-player .player .controls-right,
+.video-player .player .controls-left,
+.volume{
+    display: flex;
+    align-items: center;
+}
+.video-player .player .control-group{
+    justify-content: space-between;
+    margin: 10px auto;
+}
+.control-group .controls-left i{
+    margin-right: 10px;
+}
+.control-group .controls-right div{
+    margin-left: 10px;
+}
+.volume-range{
+    width: 50px;
+    height: 4px;
+    background: var(--white);
+    border-radius: 3px;
+    cursor: pointer;
+}
+.volume-bar{
+    width: 0%;
+    height: 4px;
+    background: var(--youtube-red);
+    transition: all .15s ease;
+}
+.show-controls:hover .controls-container{
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+
+.play-controls-responsive{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    display: none;
+}

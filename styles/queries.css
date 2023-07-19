@@ -1,0 +1,46 @@
+@media only screen and (max-width: 1300px){
+    .left-div-wrapper{
+        position: absolute;
+        left: -100%;
+        transition: all .29s;
+    }
+    .res-hide{
+        left: 0;
+        transform: translateX(0);
+        box-shadow: 0px 0 10px rgba(0,0,0,.4);
+    }
+    .left-div-wrapper-2{
+        display: block;
+    }
+
+    .right-div-wrapper{
+        flex-basis: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 600px){
+    
+    header .search input{
+        display: none;
+    }
+
+    header .search .search-input,
+    header .search button{
+        background: none !important;
+        justify-content: right ;
+        width: 10px;
+    }
+    .responsive-search{
+        width: 98% !important;
+        right: 1% !important;
+    }
+
+    .left-div-wrapper-2{
+        display: none;
+    }
+    header .account-related{
+        display: none;
+    }
+
+}

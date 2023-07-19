@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/youtube-logo.png" type="image/x-icon">
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="./styles/video-player-styles.css">
+    <link rel="stylesheet" href="./styles/common-styles.css">
+    <link rel="stylesheet" href="./styles/colorVars.css">
+    <link rel="stylesheet" href="./styles/queries.css">
+    <link rel="stylesheet" href="./styles/video-player-queries.css">
+    <link rel="stylesheet" href="./styles/video-player-style.css">
+    <!-- FONT -->
+
+    <!-- montserat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <!-- poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="./font awesome/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <title>Video Title</title>
+</head>
+
+<body>
+
+    <!-- ----------------------------------------------- -->
+    <!-- -------------------NAVBAR---------------------- -->
+    <!-- ----------------------------------------------- -->
+    <header class="header">
+        <div class="container">
+
+            <nav class="nav">
+
+                <!-- BRAND  -->
+                <div class="brand">
+                    <div class="burger-nav">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </div>
+                    <div class="logo-wrapper">
+                        <img src="./images/brand-logo-light.png" title="Youtube Home" alt="">
+                    </div>
+                </div>
+
+                <!-- SEARCH -->
+                <div class="search">
+                    <div class="search-input">
+                        <input type="search" class="search-input-js" name="" placeholder="Search" id="">
+                        <button class="search-btn-js" title="Search"><i class="fa fa-search"></i></button>
+                    </div>
+                    <div class="mic" title="Search with your voice">
+                        <i class="fa fa-microphone"></i>
+                    </div>
+                </div>
+
+                <!-- ACCOUNT RELATED -->
+                <div class="account-related">
+                    <ul class="account-menu">
+                        <li class="account-menu-link">
+                            <i class="fa fa-video-camera" aria-hidden="true" title="Create"></i>
+                        </li>
+                        <li class="account-menu-link">
+                            <div class="dot" title="Youtube apps">
+                                <div></div>
+                            </div>
+                        </li>
+                        <li class="account-menu-link">
+                            <i class="fa fa-bell-o" title="Notifications"></i>
+                        </li>
+                        <li class="account-menu-link">
+                            <div class="profile"><img src="./images/profile.jpg" alt=""></div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="responsive-search">
+                <div class="search-input">
+                    <button class="close-btn-js" title="Close"><i class="fa fa-arrow-left"
+                            aria-hidden="true"></i></button>
+                    <input type="search" name="" placeholder="Search" id="">
+                    <button title="Search"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="section-container">
+            <div class="left-div-wrapper ">
+
+                <div class="menu menu-1">
+                    <ul class="menu-list">
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-home" aria-hidden="true"></i></div>
+                            <div class="title">Home</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-compass" aria-hidden="true"></i></div>
+                            <div class="title">Explore</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><img src="./images/shorts-logo.png" alt=""></div>
+                            <div class="title">Shorts</div>
+                        </li>
+                        <li class="menu-link subscribe-link">
+                            <div class="icon"><i class="fa fa-play subscribe"></i></div>
+                            <div class="title">Subscriptions</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <div class="menu menu-2">
+                    <ul class="menu-list">
+                        <li class="menu-link library-icon">
+                            <div class="icon">
+                                <div class="icon-wrapper"><i class="fa fa-play"></i></div>
+                            </div>
+                            <div class="title">Library</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-history" aria-hidden="true"></i></div>
+                            <div class="title">History</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-play"></i></div>
+                            <div class="title">Your videos</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-clock-o"></i></div>
+                            <div class="title">Watch later</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></div>
+                            <div class="title">Liked videos</div>
+                        </li>
+                        <li class="menu-link see-more-js-1">
+                            <div class="icon"><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
+                            <div class="title">Show more</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="menu menu-3">
+                    <ul class="menu-list">
+                        <li class="menu-link">
+                            <div class="icon"><img src="./images/subscriptions.png" alt=""></div>
+                            <div class="title">OnGoing C++ Placement Course</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><img src="./images/subscriptions.png" alt=""></div>
+                            <div class="title">Java Complete Course</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><img src="./images/subscriptions.png" alt=""></div>
+                            <div class="title">Learn Advance PHP</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><img src="./images/subscriptions.png" alt=""></div>
+                            <div class="title">Node.js Crash Course</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><img src="./images/subscriptions.png" alt=""></div>
+                            <div class="title">Full Mordern React Tutorial</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><img src="./images/subscriptions.png" alt=""></div>
+                            <div class="title">Logarithms</div>
+                        </li>
+                        <li class="menu-link see-less-js-1">
+                            <div class="icon"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
+                            <div class="title">Show Fewer</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <div class="menu menu-4">
+                    <ul class="menu-list">
+                        <li class="menu-link">
+                            <div class="icon">
+                                <div class="profile"><img src="./images/intellipaat.jpg" alt=""></div>
+                            </div>
+                            <div class="title">Intellipaat</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon">
+                                <div class="icon">
+                                    <div class="profile"><img src="./images/trends-logo.jpg" alt=""></div>
+                                </div>
+                            </div>
+                            <div class="title">TRENDS LOGO</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon">
+                                <div class="icon">
+                                    <div class="profile"><img src="./images/5-minutes-craft.jpg" alt=""></div>
+                                </div>
+                            </div>
+                            <div class="title">5-minutes Crafts</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon">
+                                <div class="icon">
+                                    <div class="profile"><img src="./images/codehelp.jpg" alt=""></div>
+                                </div>
+                            </div>
+                            <div class="title">Codehelp - by Babbar</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon">
+                                <div class="icon">
+                                    <div class="profile"><img src="./images/tseries.jpg" alt=""></div>
+                                </div>
+                            </div>
+                            <div class="title">T-Series</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon">
+                                <div class="icon">
+                                    <div class="profile"><img src="./images/easy-tutorials.jpg" alt=""></div>
+                                </div>
+                            </div>
+                            <div class="title">Easy Tutorials</div>
+                        </li>
+                        <li class="menu-link see-more-js-2">
+                            <div class="icon"><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
+                            <div class="title">Show more</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="menu menu-5">
+                    <ul class="menu-list">
+                        <li class="menu-link">
+                            <div class="icon">
+                                <div class="profile"><img src="./images/dev-ed.jpg" alt=""></div>
+                            </div>
+                            <div class="title">Dev Ed</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon">
+                                <div class="profile"><img src="./images/sidhu-moosewala.jpg" alt=""></div>
+                            </div>
+                            <div class="title">Sidhu Moose Wala</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon">
+                                <div class="profile"><img src="./images/league-of-legends.jpg" alt=""></div>
+                            </div>
+                            <div class="title">League of Legends</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon">
+                                <div class="profile"><img src="./images/bnftv.jpg" alt=""></div>
+                            </div>
+                            <div class="title">BnfTV</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon">
+                                <div class="profile"><img src="./images/comicverse.jpg" alt=""></div>
+                            </div>
+                            <div class="title">ComicVerse</div>
+                        </li>
+                        <li class="menu-link see-less-js-2">
+                            <div class="icon"><i class="fa fa-arrow-up"></i></div>
+                            <div class="title">Show Fewer</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <div class="menu menu-6">
+                    <ul class="menu-list">
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-youtube-play" aria-hidden="true"></i></div>
+                            <div class="title">YouTube Premium</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-film" aria-hidden="true"></i></div>
+                            <div class="title">Films</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-gamepad" aria-hidden="true"></i></div>
+                            <div class="title">Gaming</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><img src="./images/live.png" alt=""></div>
+                            <div class="title">Live</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><img src="./images/fashion.png" alt=""></div>
+                            <div class="title">Fashion and beauty</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></div>
+                            <div class="title">Learning</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-trophy" aria-hidden="true"></i></div>
+                            <div class="title">Sports</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <div class="menu menu-7">
+                    <ul class="menu-list">
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-cog" aria-hidden="true"></i></div>
+                            <div class="title">Settings</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-flag-o" aria-hidden="true"></i></div>
+                            <div class="title">Report history</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-question-circle-o" aria-hidden="true"></i></div>
+                            <div class="title">Help</div>
+                        </li>
+                        <li class="menu-link">
+                            <div class="icon"><i class="fa fa-commenting-o" aria-hidden="true"></i></div>
+                            <div class="title">Send feedback</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <div class="menu privacy-policy">
+                    <div class="about">
+                        <a href="">About </a> <a href="">Press</a> <a href="">Copyright</a> <br>
+                        <a href="">Contact us</a> <a href="">Creator</a> <a href="">Advertise</a> <br>
+                        <a href="">Developers</a>
+                    </div>
+                    <div class="policy">
+                        <a href="">Terms</a> <a href="">Privacy</a> <a href="">Policy&Safety</a> <br>
+                        <a href="">How YouTube works</a> <br>
+                        <a href="">Test new features</a>
+                    </div>
+                    <div class="Copyright">
+                        This website is just for learning purpose <br>
+                        Intend is not making money thorugh this. <br><br>
+                        &copy; Tarun Sharma 2022 <br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-div-wrapper">
+                <!-- VIDEO PLAYER -->
+                <div class="video-player-wrapper">
+
+                    <div class="video-player">
+                        <div class="player">
+                            <video id="video-js" src="./videos/Pexels3.mp4"
+                                width="100%"></video>
+
+                                <!-- ANIMATING ICONS ON KEY EVENTS -->
+                                <div class="event-icon"><i class="animate fa fa-play play-js"></i></div>
+                                <div class="event-icon"><i class="animate fa fa-pause pause-js"></i></div>
+                                <div class="event-icon"><i class="animate fa fa-volume-up volume-up-js"></i></div>
+                                <div class="event-icon"><p class="animate volume volume-js">50%</p></div>
+                                <div class="event-icon"><i class="animate fa fa-volume-off volume-off-js"></i></div>
+                                <div class="event-icon"><i class="animate fa fa-forward forward-js"></i> </div>
+                                <div class="event-icon"> <i class="animate fa fa-backward backward-js"></i></div>
+                                <div class="event-icon"><p class="animate fast-forward-js"></p></div>
+                                <div class="event-icon"><p class="animate fast-backward-js"></p></div>
+                                <div class="play-controls-responsive">
+                                    <i class="fa fa-play" id="play-btn-responsive" title="Play"></i>
+                                </div>
+
+                                <!-- CONTROLS -->
+                                <div class="show-controls">
+                                    <div class="controls-container">
+                                           
+                                        <!-- PROGRESS BAR -->
+                                        <div class="progress-range">
+                                            <div class="progress-bar"></div>
+                                        </div>
+    
+                                        <!-- CONTROL GROUPS -->
+                                        <div class="control-group">
+    
+                                            <!-- left controls -->
+                                            <div class="controls-left">
+                                                
+                                                <div class="play-controls">
+                                                    <i class="fa fa-play" id="play-btn" title="Play"></i>
+                                                </div>
+        
+                                                <!-- volume controls -->
+                                                <div class="volume">
+                                                    <div class="volume-icon">
+                                                        <i class="fa fa-volume-up" title="Mute" id="volume-icon"></i>
+                                                    </div>
+                                                    <div class="volume-range" title="Change Volume">
+                                                        <div class="volume-bar"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <!-- right controls -->
+                                            <div class="controls-right">
+                                                <!-- speed -->
+                                                <div class="speed" title="Playback Rate">
+                                                    <select name="playBackRate" class="player-speed" id="">
+                                                        <option value="0.25">0.25 x</option>
+                                                        <option value="0.5">0.5 x</option>
+                                                        <option value="0.75">0.75 x</option>
+                                                        <option value="1" selected>1 x</option>
+                                                        <option value="1.25">1.25 x</option>
+                                                        <option value="1.5">1.50 x</option>
+                                                        <option value="1.75">1.75 x</option>
+                                                        <option value="2">2 x</option>
+                                                    </select>
+                                                </div>
+    
+                                                <!-- time -->
+                                                <div class="time">
+                                                    <span class="time-elapsed">00:00 /</span>
+                                                    <span class="time-duration">--:--</span>
+                                                </div>
+    
+                                                <!-- fullscreen -->
+                                                <div class="fullscreen">
+                                                    <i class="fa fa-expand"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                        </div>
+
+                        <div class="video-title ">
+                            Diljit Dosanjh: Peaches (Official Music Video) Intense | Raj Ranjodh | Drive Thru
+                        </div>
+
+                        <div class="views-likes-options">
+                            <div class="views-wrapper">
+                                26,105,202 views . 15 Jul 2022
+                            </div>
+                            <div class="likes-wrapper">
+                                <ul>
+                                    <li title="Like"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 302K</li>
+                                    <li title="Dislike"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i> DISLIKE
+                                    </li>
+                                    <li title="Share"><i class="fa fa-share" aria-hidden="true"></i> SHARE</li>
+                                    <li title="Clip"><i class="fa fa-scissors" aria-hidden="true"></i> CLIP</li>
+                                    <li title="Save"><i class="fa fa-bookmark-o" aria-hidden="true"></i> SAVE</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="profile-info-wrapper">
+                            <div class="subscribe-wrapper">
+                                <div class="profile-wrapper">
+                                    <div class="profile">
+                                        <img src="./images/alpha-studios.jpg" alt="">
+                                    </div>
+                                    <div class="profile-desc">
+                                        <p>Diljit Dosanjh</p>
+                                        <p>3.99M Subscribers</p>
+                                        <div class="video-desc">
+                                            <p>We present to you "PEACHES" official music video performed by DILJIT
+                                                DOSANJH from the EP Drive Thru. </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="subscribe">
+                                    <button class="subscribe-btn-js btn"></button>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <hr>
+
+                        <div class="comments-wrapper">
+                            <div class="comments-count">
+                                <div class="count">410 Comments</div>
+                                <div class="sort"><i class="fa fa-sort-amount-desc" aria-hidden="true"></i> SORT BY
+                                </div>
+                            </div>
+
+                            <div class="add-comment">
+                                <div class="profile">
+                                    <img src="./images/profile.jpg" alt="">
+                                </div>
+                                <div class="add-input">
+                                    <input type="text" id="comment-input-js" placeholder="Add a comment" id="">
+                                    <hr class="comment-hr">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="comment-btn">
+                            <button class="btn cancel-btn ">Cancel</button>
+                            <button class="btn btn-disabled" id="comment-btn-js" disabled>Comment</button>
+                        </div>
+
+                        <div class="actual-comments-wrapper">
+                            <div class="profile">
+                                <img src="./images/bnftv.jpg" alt="">
+                            </div>
+                            <div class="comment-desc">
+                                <div class="name">ThaEzioAuditore <span class="time">2 year ago</span></div>
+                                <div class="comment">
+                                    OMG please do more of these design theory videos ! As a developer this would
+                                    completely go over my head and could never seem to pick out harmonious colours for
+                                    my sites, thanks for that
+                                </div>
+                                <div class="like-dislike">
+                                    <div class="like"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 93</div>
+                                    <div class="dislike"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></div>
+                                    <div class="reply">REPLY</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="actual-comments-wrapper">
+                            <div class="profile">
+                                <img src="./images/bnftv.jpg" alt="">
+                            </div>
+                            <div class="comment-desc">
+                                <div class="name">ThaEzioAuditore <span class="time">2 year ago</span></div>
+                                <div class="comment">
+                                    OMG please do more of these design theory videos ! As a developer this would
+                                    completely go over my head and could never seem to pick out harmonious colours for
+                                    my sites, thanks for that
+                                </div>
+                                <div class="like-dislike">
+                                    <div class="like"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 93</div>
+                                    <div class="dislike"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></div>
+                                    <div class="reply">REPLY</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="actual-comments-wrapper">
+                            <div class="profile">
+                                <img src="./images/bnftv.jpg" alt="">
+                            </div>
+                            <div class="comment-desc">
+                                <div class="name">ThaEzioAuditore <span class="time">2 year ago</span></div>
+                                <div class="comment">
+                                    OMG please do more of these design theory videos ! As a developer this would
+                                    completely go over my head and could never seem to pick out harmonious colours for
+                                    my sites, thanks for that
+                                </div>
+                                <div class="like-dislike">
+                                    <div class="like"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 93</div>
+                                    <div class="dislike"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></div>
+                                    <div class="reply">REPLY</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="actual-comments-wrapper">
+                            <div class="profile">
+                                <img src="./images/bnftv.jpg" alt="">
+                            </div>
+                            <div class="comment-desc">
+                                <div class="name">ThaEzioAuditore <span class="time">2 year ago</span></div>
+                                <div class="comment">
+                                    OMG please do more of these design theory videos ! As a developer this would
+                                    completely go over my head and could never seem to pick out harmonious colours for
+                                    my sites, thanks for that
+                                </div>
+                                <div class="like-dislike">
+                                    <div class="like"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 93</div>
+                                    <div class="dislike"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></div>
+                                    <div class="reply">REPLY</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="actual-comments-wrapper">
+                            <div class="profile">
+                                <img src="./images/bnftv.jpg" alt="">
+                            </div>
+                            <div class="comment-desc">
+                                <div class="name">ThaEzioAuditore <span class="time">2 year ago</span></div>
+                                <div class="comment">
+                                    OMG please do more of these design theory videos ! As a developer this would
+                                    completely go over my head and could never seem to pick out harmonious colours for
+                                    my sites, thanks for that
+                                </div>
+                                <div class="like-dislike">
+                                    <div class="like"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 93</div>
+                                    <div class="dislike"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></div>
+                                    <div class="reply">REPLY</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="actual-comments-wrapper">
+                            <div class="profile">
+                                <img src="./images/bnftv.jpg" alt="">
+                            </div>
+                            <div class="comment-desc">
+                                <div class="name">ThaEzioAuditore <span class="time">2 year ago</span></div>
+                                <div class="comment">
+                                    OMG please do more of these design theory videos ! As a developer this would
+                                    completely go over my head and could never seem to pick out harmonious colours for
+                                    my sites, thanks for that
+                                </div>
+                                <div class="like-dislike">
+                                    <div class="like"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 93</div>
+                                    <div class="dislike"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></div>
+                                    <div class="reply">REPLY</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="actual-comments-wrapper">
+                            <div class="profile">
+                                <img src="./images/bnftv.jpg" alt="">
+                            </div>
+                            <div class="comment-desc">
+                                <div class="name">ThaEzioAuditore <span class="time">2 year ago</span></div>
+                                <div class="comment">
+                                    OMG please do more of these design theory videos ! As a developer this would
+                                    completely go over my head and could never seem to pick out harmonious colours for
+                                    my sites, thanks for that
+                                </div>
+                                <div class="like-dislike">
+                                    <div class="like"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 93</div>
+                                    <div class="dislike"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></div>
+                                    <div class="reply">REPLY</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="actual-comments-wrapper">
+                            <div class="profile">
+                                <img src="./images/bnftv.jpg" alt="">
+                            </div>
+                            <div class="comment-desc">
+                                <div class="name">ThaEzioAuditore <span class="time">2 year ago</span></div>
+                                <div class="comment">
+                                    OMG please do more of these design theory videos ! As a developer this would
+                                    completely go over my head and could never seem to pick out harmonious colours for
+                                    my sites, thanks for that
+                                </div>
+                                <div class="like-dislike">
+                                    <div class="like"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 93</div>
+                                    <div class="dislike"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></div>
+                                    <div class="reply">REPLY</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="actual-comments-wrapper">
+                            <div class="profile">
+                                <img src="./images/bnftv.jpg" alt="">
+                            </div>
+                            <div class="comment-desc">
+                                <div class="name">ThaEzioAuditore <span class="time">2 year ago</span></div>
+                                <div class="comment">
+                                    OMG please do more of these design theory videos ! As a developer this would
+                                    completely go over my head and could never seem to pick out harmonious colours for
+                                    my sites, thanks for that
+                                </div>
+                                <div class="like-dislike">
+                                    <div class="like"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 93</div>
+                                    <div class="dislike"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></div>
+                                    <div class="reply">REPLY</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="actual-comments-wrapper">
+                            <div class="profile">
+                                <img src="./images/bnftv.jpg" alt="">
+                            </div>
+                            <div class="comment-desc">
+                                <div class="name">ThaEzioAuditore <span class="time">2 year ago</span></div>
+                                <div class="comment">
+                                    OMG please do more of these design theory videos ! As a developer this would
+                                    completely go over my head and could never seem to pick out harmonious colours for
+                                    my sites, thanks for that
+                                </div>
+                                <div class="like-dislike">
+                                    <div class="like"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 93</div>
+                                    <div class="dislike"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></div>
+                                    <div class="reply">REPLY</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="actual-comments-wrapper">
+                            <div class="profile">
+                                <img src="./images/bnftv.jpg" alt="">
+                            </div>
+                            <div class="comment-desc">
+                                <div class="name">ThaEzioAuditore <span class="time">2 year ago</span></div>
+                                <div class="comment">
+                                    OMG please do more of these design theory videos ! As a developer this would
+                                    completely go over my head and could never seem to pick out harmonious colours for
+                                    my sites, thanks for that
+                                </div>
+                                <div class="like-dislike">
+                                    <div class="like"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 93</div>
+                                    <div class="dislike"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></div>
+                                    <div class="reply">REPLY</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- VIDEO LIST SHOW -->
+                <div class="video-list-show-wrapper">
+
+                    <div class="video-list-show">
+                        <div class="video-thumbnail">
+                            <img src="./images/thumbnails/pexels3.jpg" alt="">
+                            <div class="video-duration">03:51</div>
+                        </div>
+                        <div class="video-title-desc">
+                            <div class="video-title video-title-js">
+                                Diljit Dosanjh: Peaches (Official Music Video) Intense | Raj Ranjodh | Drive Thru
+                            </div>
+                            <div class="channel-name">Diljit Dosanjh</div>
+                            <div class="views-time">
+                                2.5M views . 1 month ago
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-list-show">
+                        <div class="video-thumbnail">
+                            <img src="./images/thumbnails/peaches.jpg" alt="">
+                            <div class="video-duration">03:51</div>
+                        </div>
+                        <div class="video-title-desc">
+                            <div class="video-title video-title-js">
+                                Diljit Dosanjh: Peaches (Official Music Video) Intense | Raj Ranjodh | Drive Thru
+                            </div>
+                            <div class="channel-name">Diljit Dosanjh</div>
+                            <div class="views-time">
+                                2.5M views . 1 month ago
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-list-show">
+                        <div class="video-thumbnail">
+                            <img src="./images/thumbnails/pexels1.jpg" alt="">
+                            <div class="video-duration">03:51</div>
+                        </div>
+                        <div class="video-title-desc">
+                            <div class="video-title video-title-js">
+                                Diljit Dosanjh: Peaches (Official Music Video) Intense | Raj Ranjodh | Drive Thru
+                            </div>
+                            <div class="channel-name">Diljit Dosanjh</div>
+                            <div class="views-time">
+                                2.5M views . 1 month ago
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-list-show">
+                        <div class="video-thumbnail">
+                            <img src="./images/thumbnails/pexels2.jpg" alt="">
+                            <div class="video-duration">03:51</div>
+                        </div>
+                        <div class="video-title-desc">
+                            <div class="video-title video-title-js">
+                                Diljit Dosanjh: Peaches (Official Music Video) Intense | Raj Ranjodh | Drive Thru
+                            </div>
+                            <div class="channel-name">Diljit Dosanjh</div>
+                            <div class="views-time">
+                                2.5M views . 1 month ago
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-list-show">
+                        <div class="video-thumbnail">
+                            <img src="./images/thumbnails/pexels3.jpg" alt="">
+                            <div class="video-duration">03:51</div>
+                        </div>
+                        <div class="video-title-desc">
+                            <div class="video-title video-title-js">
+                                Diljit Dosanjh: Peaches (Official Music Video) Intense | Raj Ranjodh | Drive Thru
+                            </div>
+                            <div class="channel-name">Diljit Dosanjh</div>
+                            <div class="views-time">
+                                2.5M views . 1 month ago
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-list-show">
+                        <div class="video-thumbnail">
+                            <img src="./images/thumbnails/pexels4.jpg" alt="">
+                            <div class="video-duration">03:51</div>
+                        </div>
+                        <div class="video-title-desc">
+                            <div class="video-title video-title-js">
+                                Diljit Dosanjh: Peaches (Official Music Video) Intense | Raj Ranjodh | Drive Thru
+                            </div>
+                            <div class="channel-name">Diljit Dosanjh</div>
+                            <div class="views-time">
+                                2.5M views . 1 month ago
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-list-show">
+                        <div class="video-thumbnail">
+                            <img src="./images/thumbnails/peaches.jpg" alt="">
+                            <div class="video-duration">03:51</div>
+                        </div>
+                        <div class="video-title-desc">
+                            <div class="video-title video-title-js">
+                                Diljit Dosanjh: Peaches (Official Music Video) Intense | Raj Ranjodh | Drive Thru
+                            </div>
+                            <div class="channel-name">Diljit Dosanjh</div>
+                            <div class="views-time">
+                                2.5M views . 1 month ago
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-list-show">
+                        <div class="video-thumbnail">
+                            <img src="./images/thumbnails/pexels1.jpg" alt="">
+                            <div class="video-duration">03:51</div>
+                        </div>
+                        <div class="video-title-desc">
+                            <div class="video-title video-title-js">
+                                Diljit Dosanjh: Peaches (Official Music Video) Intense | Raj Ranjodh | Drive Thru
+                            </div>
+                            <div class="channel-name">Diljit Dosanjh</div>
+                            <div class="views-time">
+                                2.5M views . 1 month ago
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-list-show">
+                        <div class="video-thumbnail">
+                            <img src="./images/thumbnails/pexels4.jpg" alt="">
+                            <div class="video-duration">03:51</div>
+                        </div>
+                        <div class="video-title-desc">
+                            <div class="video-title video-title-js">
+                                Diljit Dosanjh: Peaches (Official Music Video) Intense | Raj Ranjodh | Drive Thru
+                            </div>
+                            <div class="channel-name">Diljit Dosanjh</div>
+                            <div class="views-time">
+                                2.5M views . 1 month ago
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-list-show">
+                        <div class="video-thumbnail">
+                            <img src="./images/thumbnails/pexels3.jpg" alt="">
+                            <div class="video-duration">03:51</div>
+                        </div>
+                        <div class="video-title-desc">
+                            <div class="video-title video-title-js">
+                                Diljit Dosanjh: Peaches (Official Music Video) Intense | Raj Ranjodh | Drive Thru
+                            </div>
+                            <div class="channel-name">Diljit Dosanjh</div>
+                            <div class="views-time">
+                                2.5M views . 1 month ago
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-list-show">
+                        <div class="video-thumbnail">
+                            <img src="./images/thumbnails/pexels1.jpg" alt="">
+                            <div class="video-duration">03:51</div>
+                        </div>
+                        <div class="video-title-desc">
+                            <div class="video-title video-title-js">
+                                Diljit Dosanjh: Peaches (Official Music Video) Intense | Raj Ranjodh | Drive Thru
+                            </div>
+                            <div class="channel-name">Diljit Dosanjh</div>
+                            <div class="views-time">
+                                2.5M views . 1 month ago
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+
+    <script src="./js/app.js"></script>
+    <script src="./js/video-player-controls.js"></script>
+</body>
+
+</html>

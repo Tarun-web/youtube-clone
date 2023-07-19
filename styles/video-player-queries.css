@@ -1,0 +1,143 @@
+
+
+
+@media only screen and (max-width: 1200px){
+    .views-likes-options div{
+        font-size: 80%;
+    }
+   .likes-wrapper ul li{
+    font-size: .8rem;
+    margin-left: 20px;
+   }
+   .video-player{
+    margin: 2% auto
+   }
+   .video-player-wrapper{
+    flex-basis: 70%;
+   }
+   .video-list-show-wrapper{
+    flex-basis: 30%;
+   }
+   .video-list-show-wrapper .video-thumbnail{
+    flex-basis: 200px;
+   }
+   .video-list-show-wrapper .video-title-desc{
+    flex-basis: 200px;
+   }
+
+}
+@media only screen and (max-width: 1000px){
+    .right-div-wrapper{
+        flex-direction: column;
+        /* height: auto; */
+        overflow-y: scroll;
+
+    }
+    .video-list-show-wrapper{
+        margin-left: 20px;
+        margin-right: 0;
+        /* width: 100%; */
+    }
+    .video-list-show-wrapper .video-thumbnail{
+        flex-basis: 30%;
+    }
+       .video-list-show-wrapper .video-title-desc{
+        flex-basis: 70%;
+
+    }
+    .comments-wrapper,
+    .actual-comments-wrapper,
+    .comment-btn{
+        display: none;
+    }
+    .profile-wrapper .video-desc{
+        flex-basis: 90%;
+    }
+
+    .play-controls{
+        display: none;
+    }
+    .video-player .player .show-controls{
+        padding-top: 0% !important;
+        opacity: 1 !important;
+    }
+    .show-controls .controls-container{
+        opacity: 1;
+        transition: opacity .25s ease-in-out 0s ;
+    }
+    .play-controls-responsive{
+        display: block !important;
+        transition: opacity .25s ease-in-out 0s ;
+        /* opacity: 0; */
+    }
+    .event-icon{
+        display: none;
+    }
+   
+}
+@media only screen and (max-width: 600px){
+    /* {
+        font-size: ;
+    } */
+    .video-player{
+        width: 98%;
+    }
+    :is(.video-player) .video-title, .views-likes-options, .profile-info-wrapper {
+        margin: 15px;    
+    } 
+    .views-likes-options{
+        flex-direction: column;
+    }
+    .views-likes-options .views-wrapper{
+        width: 100%;
+        margin-bottom: 20px;
+        margin-left: 15px;
+    }
+    .views-likes-options ul li{
+        margin-left: 15px;
+    }
+    .video-thumbnail{
+        height: 100%;
+    }
+    .video-thumbnail .video-duration{
+        font-size: .6rem;
+    }
+    .video-list-show{
+        margin: 10px auto;
+    }
+    .video-list-show .video-title{
+        font-size: .7rem;
+    }
+    .video-list-show .channel-name,
+    .video-list-show .views-time{
+        font-size: .5rem;
+    }
+
+}
+
+/* @media only screen and (max-width: 482px){
+
+    body{
+        overflow-y: scroll;
+    }
+    .video-list-show-wrapper .video-thumbnail{
+        flex-basis: 45%;
+       }
+       .video-list-show-wrapper .video-title-desc{
+        flex-basis: 55%;
+
+       }
+    section,
+    header{
+        width: 482px;
+    }
+    .right-div-wrapper{
+        height: 200vh;
+    }
+}
+@media only screen and (max-width: 400px){
+    /* section,
+    header{
+
+    } */
+/* } */
